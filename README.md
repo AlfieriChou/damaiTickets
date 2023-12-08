@@ -62,7 +62,7 @@ uiautomator2 可能报错，就去环境变量添加 APPIUM_SKIP_CHROMEDRIVER_IN
 #### 4.1 启动 appium
 
 手机开发者模式，打开 usb 安装和调试，手机数据线连上电脑，打开准备抢票的页面，如下
-<img src="screenshot.png" width="50%" height="50%" />
+<img src="damai_appium/screenshot.png" width="50%" height="50%" />
 
 #### 4.2 启动 appium
 
