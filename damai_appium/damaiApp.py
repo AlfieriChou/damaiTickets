@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
 """
-__Author__ = "WECENG"
-__Version__ = "1.0.0"
+__Author__ = "wahh159"
+__Version__ = "1.0.1"
 __Description__ = "大麦app抢票自动化"
-__Created__ = 2023/10/26 10:27
+__Created__ = 2023/12/8 9:10
 """
 from time import sleep
 
@@ -49,7 +49,7 @@ driver = webdriver.Remote(config.server_url, options=device_app_info)
 # 设置等待时间，等待1s
 driver.implicitly_wait(0.1)
 # 空闲时间10ms,加速
-driver.update_settings({"waitForIdleTimeout": 10})
+driver.update_settings({"waitForIdleTimeout": 0.1})
 
 
 def handle_order(driver, config):
@@ -135,12 +135,6 @@ while driver.find_elements(by=By.XPATH,
     
     # 立即购买
     if '立' in bot_btn or '缺' in bot_btn :
-        # 生成随机坐标
-        random_x = random.randint(left, right)
-        random_y = random.randint(top, bottom)
-
-        # 点击立即购买
-        # driver.tap([(random_x, random_y)])
         driver.tap([(606, 2301)])
 
         comfirmSuccess=False
